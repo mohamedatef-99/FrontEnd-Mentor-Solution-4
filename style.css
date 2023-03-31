@@ -1,0 +1,304 @@
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;  
+    align-items: center;
+    margin: 0 50px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo .burger-menu{
+    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+    padding-top: 5px;
+}
+.burger-menu .menu.hidden{
+    display: none;
+}
+.burger-menu .close.hidden{
+    display: none;
+}
+.burger-menu .close{
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.links ul{
+    display: flex;
+    list-style: none;
+    /* display: block; */
+    position: relative;
+}
+.links ul.active {
+    display: block;
+}
+.links ul li{
+    margin-left: 20px;
+    color: hsl(220, 14%, 75%);
+    position: relative;
+}
+.links ul li:hover, .links ul .active{
+    color: hsl(0, 0%, 0%);
+}
+
+.links ul .active::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -26px;
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
+}
+.links ul li a {
+    cursor: pointer;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.image{
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.cart{
+    cursor: pointer;
+}
+
+.container{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 600px 420px;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+}
+.arrows{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 400px;
+    top: 35%;
+}
+.arrows .next, .arrows .prev{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    cursor: pointer ;
+    margin: 10px;
+    padding-top: 10px;
+}
+.pictures{
+    margin-left: 50px;
+    position: relative;
+}
+.large-image{
+    width: 400px;
+    height: 400px;
+}
+.large-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.small-images{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.small-images .img1,
+.small-images .img2, 
+.small-images .img3, 
+.small-images .img4{
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+.small-images .img1 img, 
+.small-images .img2 img, 
+.small-images .img3 img, 
+.small-images .img4 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.small-images img:hover{
+    opacity: 0.5;
+}
+
+.para h3{
+    font-size: 16px;
+    color: hsl(26, 100%, 55%);
+}
+.para h1{
+    font-size: 40px;
+}
+.para p{
+    color: hsl(220, 14%, 75%);
+    font-size: 16px;
+}
+.discount{
+    display: flex;
+    align-items: center;
+}
+.discount h1{
+    font-size: 25px;
+    margin: 0;
+}
+.discount h3{
+    color: hsl(26, 100%, 55%);
+    font-size: 15px;
+    margin: 0;
+    margin-left: 30px;
+    padding: 3px;
+    background-color: hsl(25, 100%, 94%);
+}
+.price h4{
+    color: hsl(220, 14%, 75%);
+    font-size: 14px;
+    padding: 0;
+    margin-top: 8px;
+    text-decoration: line-through;
+}
+.cart-items{
+    display: flex;
+    align-items: center;
+}
+.cart-items input{
+    width: 20px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+.cart-items .plus, .cart-items .minus{
+    border: none;
+    padding: 10px;
+    margin: 0;
+    background-color: hsl(223, 64%, 98%);
+    cursor: pointer;
+}
+.addToCart{
+    margin-left: 30px;
+}
+.addToCart button{
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    padding: 10px;
+    width: 200px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addToCart button svg path{
+    fill: white;
+    margin-right: 10px;
+}
+.addToCart button svg{
+    margin-right: 10px;
+}
+.addToCart button:hover{
+    opacity: 0.5;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 750px) {
+    .logo .burger-menu{
+        display: block;
+        z-index: 3;
+    }
+    .links ul{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        margin-left: 20px;
+        background-color: white;
+        z-index: 2;
+    }
+    .links ul .active::before{
+        content: "";
+        display: none;
+    }
+    .links ul li{
+        margin-top: 40px;
+    }
+    .container{
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 2; */
+    }
+    .arrows{
+        width: 400px;
+        top: 35%;
+    }
+    .pictures{
+        margin-left: 15px;
+    }
+    .small-images{
+        display: none;
+    }
+    .details{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .para h3{
+        font-size: 13px;
+    }
+    .para h1{
+        font-size: 20px;
+    }
+    .para p{
+        font-size: 13px;
+        margin: 5px;
+    }
+    .discount h1{
+        font-size: 20px;
+    }
+    .discount h3{
+        font-size: 10px;
+    }
+    .price h4{
+        font-size: 13px;
+    }
+    .price{
+        margin-top: 10px;
+    }
+
+}
